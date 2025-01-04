@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_app_ui/utils/app_styles.dart';
 
 class MyHomeWidget extends StatelessWidget {
   const MyHomeWidget({super.key});
@@ -7,7 +8,7 @@ class MyHomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFeeedf2),
+      backgroundColor: AppStyles.bgColor,
       body: ListView(
         children: [
           Container(
@@ -20,8 +21,8 @@ class MyHomeWidget extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Good morning"),
-                        Text("Book Tickets"),
+                        Text("Good morning", style: AppStyles.headLineStyle3,),
+                        Text("Book Tickets", style: AppStyles.headLineStyle1,),
                       ],
                     ),
                     Container(
