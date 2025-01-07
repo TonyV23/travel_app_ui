@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:travel_app_ui/screens/ticket.dart';
 import 'package:travel_app_ui/utils/app_styles.dart';
 
 class MyHomeWidget extends StatelessWidget {
@@ -91,8 +92,9 @@ class MyHomeWidget extends StatelessWidget {
                 )
               ],
             ),
-          )
-          
+          ),
+          Gap(15),
+          TicketView(),
         ],
       ),
     );
