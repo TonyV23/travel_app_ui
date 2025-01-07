@@ -93,7 +93,17 @@ class MyHomeWidget extends StatelessWidget {
             ),
           ),
           Gap(15),
-          TicketView(),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.only(left: 16),
+            child: Row(
+              children: [
+                TicketView(),
+                TicketView(),
+                TicketView(),
+              ],
+            ),
+          )
         ],
       ),
     );

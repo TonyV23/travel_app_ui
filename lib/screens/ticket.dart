@@ -12,10 +12,10 @@ class TicketView extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return SizedBox(
-      width: size.width,
+      width: size.width * 0.85,
       height: 200,
       child: Container(
-        margin: EdgeInsets.only(left: 16),
+        margin: EdgeInsets.only(right: 16),
         child: Column(
           children: [
             // showing ticket part with blue bgColor
@@ -170,7 +170,8 @@ class TicketView extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(21),
                       bottomRight: Radius.circular(21))),
-              padding: EdgeInsets.only(left: 16, top: 10, right: 16, bottom: 16),
+              padding:
+                  EdgeInsets.only(left: 16, top: 10, right: 16, bottom: 16),
               child: Column(
                 children: [
                   Row(
