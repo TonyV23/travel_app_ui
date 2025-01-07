@@ -7,6 +7,7 @@ class AppStyles {
   static Color textColor = Color(0xFF3b3b3b);
   static Color bgColor = Color(0xFFeeedf2);
   static Color orangeColor = Color(0xFF526799);
+  static Color orangeBgColor = Color(0xFFF36B67);
   static TextStyle textStyle =
       TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);
   static TextStyle headLineStyle1 =
@@ -15,6 +16,6 @@ class AppStyles {
       TextStyle(fontSize: 21, color: textColor, fontWeight: FontWeight.bold);
   static TextStyle headLineStyle3 =
       TextStyle(fontSize: 17, color: textColor, fontWeight: FontWeight.w500);
-  static TextStyle headLineStyle4 =
-      TextStyle(fontSize: 14, color: Colors.grey.shade500, fontWeight: FontWeight.w500);
+  static TextStyle headLineStyle4 = TextStyle(
+      fontSize: 14, color: Colors.grey.shade500, fontWeight: FontWeight.w500);
 }
