@@ -8,6 +8,7 @@ class AppStyles {
   static Color bgColor = Color(0xFFeeedf2);
   static Color orangeColor = Color(0xFF526799);
   static Color orangeBgColor = Color(0xFFF36B67);
+  static Color kakiColor = Color(0xFFd2bdb6);
   static TextStyle textStyle =
       TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);
   static TextStyle headLineStyle1 =

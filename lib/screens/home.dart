@@ -1,8 +1,10 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:travel_app_ui/screens/hotel.dart';
 import 'package:travel_app_ui/screens/ticket.dart';
 import 'package:travel_app_ui/utils/app_styles.dart';
+import 'package:travel_app_ui/utils/list_infos.dart';
 
 class MyHomeWidget extends StatelessWidget {
   const MyHomeWidget({super.key});
@@ -78,9 +80,6 @@ class MyHomeWidget extends StatelessWidget {
                       style: AppStyles.headLineStyle2,
                     ),
                     InkWell(
-                      onTap: () {
-                        print("object");
-                      },
                       child: Text(
                         "View all",
                         style: AppStyles.textStyle
@@ -97,13 +96,40 @@ class MyHomeWidget extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             padding: EdgeInsets.only(left: 16),
             child: Row(
+              children: ticketList
+                  .map((singleTicket) => TicketView(tickets: singleTicket))
+                  .toList(),
+            ),
+          ),
+          Gap(15),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TicketView(),
-                TicketView(),
-                TicketView(),
+                Text(
+                  "Hotels",
+                  style: AppStyles.headLineStyle2,
+                ),
+                InkWell(
+                  child: Text(
+                    "View all",
+                    style: AppStyles.textStyle
+                        .copyWith(color: AppStyles.primaryColor),
+                  ),
+                )
               ],
             ),
-          )
+          ),
+          Gap(15),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.only(left: 16),
+            child: Row(
+                children: hotelList
+                    .map((singleHotel) => HotelView(hotel: singleHotel))
+                    .toList()),
+          ),
         ],
       ),
     );
