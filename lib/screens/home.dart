@@ -5,6 +5,7 @@ import 'package:travel_app_ui/screens/hotel.dart';
 import 'package:travel_app_ui/screens/ticket.dart';
 import 'package:travel_app_ui/utils/app_styles.dart';
 import 'package:travel_app_ui/utils/list_infos.dart';
+import 'package:travel_app_ui/widgets/double_text.dart';
 
 class MyHomeWidget extends StatelessWidget {
   const MyHomeWidget({super.key});
@@ -72,22 +73,7 @@ class MyHomeWidget extends StatelessWidget {
                   ),
                 ),
                 Gap(40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Upcomming flights",
-                      style: AppStyles.headLineStyle2,
-                    ),
-                    InkWell(
-                      child: Text(
-                        "View all",
-                        style: AppStyles.textStyle
-                            .copyWith(color: AppStyles.primaryColor),
-                      ),
-                    )
-                  ],
-                )
+                AppDoubleText(title: "Upcomming flights", action: "view all"),
               ],
             ),
           ),
@@ -104,22 +90,7 @@ class MyHomeWidget extends StatelessWidget {
           Gap(15),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Hotels",
-                  style: AppStyles.headLineStyle2,
-                ),
-                InkWell(
-                  child: Text(
-                    "View all",
-                    style: AppStyles.textStyle
-                        .copyWith(color: AppStyles.primaryColor),
-                  ),
-                )
-              ],
-            ),
+            child: AppDoubleText(title: "Hotels", action: "view all"),
           ),
           Gap(15),
           SingleChildScrollView(
