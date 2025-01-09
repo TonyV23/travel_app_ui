@@ -75,10 +75,11 @@ class MySearchWidget extends StatelessWidget {
           AppDoubleText(title: "Upcomming flights", action: "view all"),
           Gap(20),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 width: size.width * 0.42,
-                height: 380,
+                height: 445,
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -100,13 +101,92 @@ class MySearchWidget extends StatelessWidget {
                               image: AssetImage(
                                   "assets/images/economy_class.jpg"))),
                     ),
+                    Gap(12),
                     Text(
-                      "20% off on early booking of this flight, Don't miss this chance.",
+                      "20% off on early booking of this flight, Don't miss this last chance les enfoirés.",
                       style: AppStyles.headLineStyle2,
                     )
                   ],
                 ),
               ),
+              Column(
+                children: [
+                  Stack(
+                    children: [
+                      Container(
+                          decoration: BoxDecoration(
+                              color: Color(0xFF3AB8BB),
+                              borderRadius: BorderRadius.circular(18),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.shade200,
+                                    blurRadius: 1,
+                                    spreadRadius: 1)
+                              ]),
+                          width: size.width * 0.44,
+                          height: 220,
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 15),
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Discount \nfor survey",
+                                  style: AppStyles.headLineStyle2.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                                Gap(8),
+                                Text(
+                                  "Take the survey about our services and get discount",
+                                  style: AppStyles.headLineStyle2.copyWith(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white),
+                                ),
+                              ])),
+                      Positioned(
+                        right: -45,
+                        top: -40,
+                        child: Container(
+                          padding: EdgeInsets.all(30),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border:
+                                Border.all(width: 18, color: Color(0xFF189999)),
+                            color: Colors.transparent,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Gap(15),
+                  Container(
+                    width: size.width * 0.44,
+                    height: 210,
+                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        color: Color(0xFFEC6445)),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Take love",
+                          style: AppStyles.headLineStyle2.copyWith(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.center,
+                        ),
+                        Gap(5),
+                        RichText(
+                            text: TextSpan(children: [
+                          TextSpan(text: '😍', style: TextStyle(fontSize: 28)),
+                          TextSpan(text: '🥰', style: TextStyle(fontSize: 40)),
+                          TextSpan(text: '😘', style: TextStyle(fontSize: 28))
+                        ]))
+                      ],
+                    ),
+                  )
+                ],
+              )
             ],
           )
         ],
